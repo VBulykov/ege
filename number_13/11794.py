@@ -1,6 +1,7 @@
 from ipaddress import *
 mask = '255.255.255.192'
 
+a_list = []
 for A in range(256):
     ip = f'223.167.{A}.167'
     network = ip_network(f"{ip}/{mask}", 0)
@@ -18,4 +19,10 @@ for A in range(256):
 
     
     if k == len(l_of_net):
-        print(A)
+        a_list.append(A)
+
+print(max(a_list))
+
+print(all([True, True]))
+print(all([True, False]))
+print(all([False, False]))
