@@ -1,6 +1,5 @@
 for n in range(0, 1000):
     s = '7' + '1' * (n + 1) + '2' * (n + 2) + '3' * (n + 3)
-    print(s)
     while '71' in s or '72' in s or '73' in s:
         if '71' in s:
             s = s.replace('71', '227', 1)

@@ -1,4 +1,4 @@
-s = '>' + '3' * 30 + '2' * 20 + '1' * 10
+s = '>' + '1' * 10  +  '3' * 30 +  '2' * 20
 
 while '>1' in s or '>2' in s or '>3' in s:
     if '>1' in s:
@@ -8,6 +8,10 @@ while '>1' in s or '>2' in s or '>3' in s:
     if '>3' in s:
         s = s.replace('>3', '1>', 1)     
 
-sum = s.count('2') * 2 + s.count('1')
+sum = (
+    s.count('2') * 2 + 
+    s.count('1') + 
+    s.count('3')
+)
 
 print(sum)
